@@ -20,23 +20,26 @@ class Home extends StatelessWidget {
                 alignment: Alignment.center, //origin: Offset(100, 100)
                 transform: Matrix4.rotationZ(math.pi/4),
                 child: Container(
-                  color: Colors.purpleAccent,
+                  color: Colors.pink[900],
                   child: Transform(
                     alignment: Alignment.center,
                     transform: Matrix4.rotationZ(-math.pi/4),
                     child: Container(
+                      margin: EdgeInsets.all(5),
                       decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: Colors.yellow[200],
                         shape: BoxShape.circle, 
                       ),
-                      child: Center(
-                        child: Text(
-                        "Galván Mendoza Carlos Manuel",
-                        style: TextStyle(
-                          color: Colors.black
-                        )
-                        )
-                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("Galván Mendoza Carlos Manuel"),
+                          Text("Hoyos Avalos Saul Ricardo"),
+                          Text("Arteaga Trejo José Joel"),
+                          Text("García Jiménez Carlos Ivan"),
+                        ],
+                      )
                     ),
                   ),
                 ),
@@ -44,11 +47,14 @@ class Home extends StatelessWidget {
             ),
         Container(
             padding: EdgeInsets.only(top: 100, left: 60),
-            child: Text("Actividad No.2", style: TextStyle(color: Colors.white), textAlign: TextAlign.center,),
+            child: Text("Actividad No.2", 
+            style: TextStyle(
+              color: Colors.white, fontSize: 24),
+              textAlign: TextAlign.center,),
           )
         ],
       ),
-      backgroundColor: Colors.indigoAccent,
+      backgroundColor: Colors.blueGrey[900],
     );
   }
 }
